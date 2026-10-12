@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="carrossel">
+        <div class="cont-carrossel">
+            <img class="img-carrossel" src="/img/2319a2cc-2fb1-47b6-92d1-38527fb3fde3.jfif" alt="">
+            <img class="img-carrossel" src="/img/__c.jfif" alt="">
+            <img class="img-carrossel" src="/img/{_o.jfif" alt="">
+        </div>
+    </div>
+    <div class="retangulo-azul">
+        <h1>Loja Tal</h1>
+    </div>
+    <br>
+</div>
+    <div class="container-agendamento">
+        <h1>Agendar Serviço</h1>
+        <div class="dropdown">
+            <button id="dropdownButton" class="dropbtn" onclick="toggleDropdown()">Selecione um Dia</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#" onclick="selectOption('Segunda')">Segunda</a>
+                <a href="#" onclick="selectOption('Terça')">Terça</a>
+                <a href="#" onclick="selectOption('Quarta')">Quarta</a>
+                <a href="#" onclick="selectOption('Quinta')">Quinta</a>
+                <a href="#" onclick="selectOption('Sexta')">Sexta</a>
+                <a href="#" onclick="selectOption('Sábado')">Sábado</a>
+                <a href="#" onclick="selectOption('Domingo')">Domingo</a>
+            </div>
+        </div>
+        <div id="horariosContainer" class="horarios-container">
+            <h3>Escolher Horário</h3>
+            <select id="horaSelect">
+                
+            </select>
+            <button onclick="bookService()">Salvar</button>
+        </div>    
+        </div>
+    </div>
+    <br>
+    <a href="/src/pages/agenda/agenda.html"><button class="btn-uni" name="btn_cadastrar">Proxímo</button></a>
+
+    <script src="/public/script.js"></script>
+</body>
+</html>

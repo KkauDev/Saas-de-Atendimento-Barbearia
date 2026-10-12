@@ -1,0 +1,62 @@
+<?php
+
+
+    if(isset($_POST['btn_cadastrar']))
+    {
+        //print_r($_POST['nm_usuario']);
+        // print_r($_POST['nr_usuario']);
+        // print_r($_POST['nm_senha']);
+    
+
+        include_once '../../config.php'; // Caminho relativo correto para acessar config.php
+
+
+    $nm_usuario = $_POST['nm_usuario'];
+    $nr_usuario = $_POST['nr_usuario'];
+    $nm_senha = $_POST['nm_senha'];
+
+    $result = mysqli_query($conexao, "INSERT INTO login_usuarios(nm_usuario,nr_usuario,nm_senha) VALUES ('$nm_usuario', '$nr_usuario', '$nm_senha' ) ");
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="cont-bv">
+        <div class="txt-pginicio">
+            <h1 class="txt-inicio"><span class="highlight">Bem Vindo</span><br> Novo Cliente!</h1>
+            <br><br>
+            <h4>Estavamos te esperando, vamos lá?</h4>
+        </div>
+    <div class="corpin-inicio">
+        <form action="cadastro.php" method="POST">
+    <label for="inpt">Nome</label>
+        <input class="inpt" name="nm_usuario" type="text" placeholder="Adicione seu Nome">
+    <br><br>
+        <label for="inpt">Telefone</label>
+        <input class="inpt" name="nr_usuario" type="text" placeholder="Adicione seu telefone">
+    <br><br>
+        <label for="inpt">Senha</label>
+        <input class="inpt" name="nm_senha" type="text" placeholder="Adicione sua senha">
+    <br><br>
+        <a href=" "><label class="txt-esq">Esqueci minha senha</label> </a>
+    <br><br><br><br><br><br><br><br>
+        <a href="/src/pages/home/Home.html"><button class="btn-uni" name="btn_cadastrar">Entrar</button></a>
+    <br><br><br>
+    </div>
+    <a href=" "><label>Não tem um cadastro? junte-se á nós <span class="highlight">Cadastre-se</span></label></a>
+</form>
+    </div>
+
+    <script src="/public/script.js"></script>
+</body>
+</html>
